@@ -72,7 +72,7 @@
             <div class="perfil-header">
                 <div class="perfil-avatar avatar-container">
                     <label for="foto-perfil" class="upload-label">
-                        <img id="preview-avatar" src="${localStorage.getItem('userFoto') || 'default_avatar.png'}" alt="Avatar do Usuário" class="foto-perfil">
+                        <img id="preview-avatar" src="${localStorage.getItem('userFoto') || 'Perfil.png'}" alt="Avatar do Usuário" class="foto-perfil">
                     </label>
                     <input type="file" id="foto-perfil" style="display: none;" accept="image/*" onchange="carregarImagem(event)">
                 </div>
@@ -432,9 +432,9 @@
 const foto = localStorage.getItem('userFoto');
 if (avatar) {
     avatar.onerror = () => {
-        avatar.src = 'default_avatar.png';
+        avatar.src = 'Perfil.png';
     };
-    avatar.src = foto || 'default_avatar.png';
+    avatar.src = foto || 'Perfil.png';
 }
 
 
@@ -445,9 +445,9 @@ if (avatar) {
 
   if (preview) {
     preview.onerror = function () {
-      preview.src = 'default_avatar.png'; // fallback se imagem estiver quebrada
+      preview.src = 'Perfil.png'; // fallback se imagem estiver quebrada
     };
-    preview.src = foto || 'default_avatar.png';
+    preview.src = foto || 'Perfil.png';
   }
 });
 
